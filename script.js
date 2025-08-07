@@ -5,8 +5,11 @@
 //      console.log("Hello! ",args[i]);
 // }
 
-let math = require("./math.js");
-console.log(math.Pi);
-console.log(math.g);
-console.log(math.sum(4,3));
+// let math = require("./math.js");
+// console.log(math.Pi);
+// console.log(math.g);
+// console.log(math.sum(4,3));
 
+let Fruits = require("./Fruits");
+
+console.log(Fruits.fruitDetails[0].details.name);
