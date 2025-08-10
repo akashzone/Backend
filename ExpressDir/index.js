@@ -18,10 +18,17 @@ app.listen(port,()=>{
 app.get("/",()=>{
     console.log("this is homepage!");
 })
-app.get("/:username/:age",(req,res)=>{
-    console.log(req.params);
-    res.send(`Hello, ${req.params.username}, age : ${req.params.age}`);
-    // console.log("Name :",req.params.username);
-    // console.log("age :",req.params.age);
+// app.get("/:username/:age",(req,res)=>{
+//     console.log(req.params);
+//     // res.send(`Hello, ${req.params.username}, age : ${req.params.age}`);
+//     // console.log("Name :",req.params.username);
+//     // console.log("age :",req.params.age);
+//   })
+
+app.get("/search",(req,res)=>{
+    console.log(req.query);
+    res.send("no results");
+    let {q} = req.query;
+    console.log("Query Parameters:",q);
   })
 })
